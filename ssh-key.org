@@ -14,6 +14,6 @@ git remote set-url origin git@github.com:
 #+END_SRC
 ** test
 #+BEGIN_SRC 
-ssh -T git@gitlib.com
+ssh -T git@github.com
 #+END_SRC    
 if still need password, look .git/config to check if change https to ssh.
