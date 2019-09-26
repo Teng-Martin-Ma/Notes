@@ -1,5 +1,0 @@
-#+title: Install Emacs on Linux
-
-* Prerequisite
- - Download the newest gz file of emacs.
- - install build-essential 
