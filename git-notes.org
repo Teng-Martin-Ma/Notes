@@ -1,4 +1,4 @@
-* Org Notes
+* git 
 ** git commands
 | keystrokes       | effects                                      |
 |------------------+----------------------------------------------|
@@ -19,22 +19,18 @@
 *** configure
  - add configuration in the .gitconfig in home dir
 #+BEGIN_SRC sh
-git config --global user.name 'Your Name Comes Here'
-git config --global user.email 'you@yourdomain.example.com'
+git config --global user.name 'xxx'
+git config --global user.email 'xxx@yourdomain.example.com'
 #+END_SRC
 
-*** creating a new repository
+*** first create directory
 #+BEGIN_SRC sh
+git remote add origin git@github.com:xxx/xxx
 git init
 git add .
-git commit -a 
+git commit -a
+git push --set-upstream origin master
 #+END_SRC
 
 *** .gitignore
 .gitignore file obey regexp.
-
-** write ssh-key
- - `ssh-keygen -t rsa` RET default settings
- - cat .ssh/***.pub
- - copy key to github 'deploy key' and give write access
- - git remote set-url origin git@github.com:
