@@ -1,0 +1,19 @@
+#+title: ssh-key generalize
+
+* generate keys
+#+BEGIN_SRC sh
+ssh-keygen -t rsa -C "xxx@gmail.com"
+#+END_SRC
+RET 3 times to generate rsa_key in .ssh/
+* config settings
+add ssh-rsa key from rsa_key.pub to github in personal settings
+#+BEGIN_SRC sh
+git config --global user.name "xxx"
+git config --global user.email "xxx@mail.com"
+git remote set-url origin git@github.com:
+#+END_SRC
+* test
+#+BEGIN_SRC 
+ssh -T git@gitlib.com
+#+END_SRC    
+if still need password, look .git/config to check if change https to ssh.

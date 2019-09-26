@@ -1,0 +1,10 @@
+#+title: Install Emacs on Linux
+
+* Prerequisite
+ - Download the newest gz file of emacs.
+ - install build-essential libgtk-3-dev libxpm-dev libjpeg-dev libgif-dev libtiff-dev gnutls-dev libncurses-dev
+
+* Install steps
+ - ./configure --with-x-toolkit=gtk3 --with-mailutils
+ - sudo make
+ - sudo make install

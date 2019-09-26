@@ -1,0 +1,40 @@
+* Org Notes
+** git commands
+| keystrokes       | effects                                      |
+|------------------+----------------------------------------------|
+| git branch       | show the list of branch heads                |
+| git clone        | download a copy of an existing repository    |
+| git diff A..B    | show differences between two version         |
+| git fetch        | update all remote branches                   |
+| git log          | show lists of commits                        |
+| git reset --hard | modify the current branch to another version |
+| git show         | show the most recent commit                  |
+| git switch -c    | create a new branch and point to             |
+| git tag -l       | list project's history                       |
+| git merge        | merge branch to current branch               |
+| git pull         | fetch changes from the remote branches       |
+| git push         | update remote branch                         |
+
+** develop with git
+*** configure
+ - add configuration in the .gitconfig in home dir
+#+BEGIN_SRC sh
+git config --global user.name 'Your Name Comes Here'
+git config --global user.email 'you@yourdomain.example.com'
+#+END_SRC
+
+*** creating a new repository
+#+BEGIN_SRC sh
+git init
+git add .
+git commit -a 
+#+END_SRC
+
+*** .gitignore
+.gitignore file obey regexp.
+
+** write ssh-key
+ - `ssh-keygen -t rsa` RET default settings
+ - cat .ssh/***.pub
+ - copy key to github 'deploy key' and give write access
+ - git remote set-url origin git@github.com:
