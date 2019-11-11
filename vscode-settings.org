@@ -1,0 +1,17 @@
+# settings.json
+{
+    "workbench.startupEditor": "none",
+    "editor.wordWrap": "on",
+    "editor.minimap.enabled": false,
+    "editor.fontFamily": "Fira Code, Menlo, Monaco, 'Courier New', monospace",
+    "editor.fontSize": 16,
+    "workbench.iconTheme": "vscode-icons",
+    "python.linting.flake8Enabled": true,
+    "python.pythonPath": "/Users/martin/Software/miniconda3/bin/python",
+    "terminal.integrated.inheritEnv": false,
+    "explorer.confirmDelete": false,
+    "git.enableSmartCommit": true,
+    "vsicons.dontShowNewVersionMessage": true,
+    "editor.fontLigatures": true,
+    "workbench.sideBar.location": "left"
+}
