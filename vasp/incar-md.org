@@ -2,5 +2,5 @@
 ** Basic Settings
 *** xc='functional label'
 *** encut=450
-/Default:/ ENCUT = largest ENMAX on the POTCAR file	
+/Default:/ ENCUT = largest ENMAX on the POTCAR file	\\
 /Description:/ ENCUT specifies the cutoff energy for the planewave basis set in eV.
