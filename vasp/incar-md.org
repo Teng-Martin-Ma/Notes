@@ -1,6 +1,45 @@
 * ASE Molecular Dynamics INCAR
-** Basic Settings
-*** xc='functional label'
-*** encut=450
-/Default:/ ENCUT = largest ENMAX on the POTCAR file	\\
-/Description:/ ENCUT specifies the cutoff energy for the planewave basis set in eV.
+** xc='functional label'
+** kpts=[4, 4, 1]
+** lreal='A'
+'Auto', projection in the real space, fully optimization automatically. The setting would influence the encut, prec as below.
+** encut=450
+Components beyond the energy cutoff are 'removed' from the projection operators.
+** prec='Normal'
+ROPT=-5e-4
+** ediff=1e-5
+Do not use default(1e-4) (too large drift).
+** ismear=-1
+Fermi Smearing. Usually for MD simulations.
+** sigma=0.1
+For metals a sensible value is usually SIGMA=0.2 (which is the default).
+** algo='very fast'
+ALGO=VeryFast selects IALGO=48 (RMM-DIIS). Usually work well with lreal='A'. Recommend for MD (fall back ALGO=FAST)
+** maxmix=40
+The charge density mixer is only reset if the storage capabilities are exceeded. If MAXMIX is positive, the approximation for the charge dielectric function which was obtained in previous ionic steps is "reused" in the current ionic step, and this in turn can reduce the number of electronic steps during relaxations and MD's.
+** ncore=4 or 8
+one orbital on 4 cores
+** isym=0
+VASP does not use symmetry, this value should be set for molecular dynamics, i.e. IBRION=0.
+** nelmin=4
+Set NELMIN to a larger value (4 to 8) for MD.
+** ibrion=0
+Standard ab-initio molecular dynamics. A Verlet algorithm is used to integrate Newton's equations of motion.
+** nsw=500
+NSW sets the maximum number of ionic steps.
+** nwrite=0
+Control what is written in OUTCAR.
+** lcharge=False
+Don't write CHGCAR. Time saving.
+** lwave=False
+Don't write WAVECAR. Time saving.
+** tebeg=1500
+TEBEG sets the start temperature for an ab-initio molecular dynamics run.
+** teend=1500
+Final temperature for md.
+** smass=3
+SMASS controls the velocities during an ab-initio molecular dynamics run. For SMASS≥0, a canonical ensemble is simulated using the algorithm of Nosé.
+** nblock=10
+After NBLOCK ionic steps the pair correlation function and the DOS are calculated and the ionic configuration is written to the XDATCAR-file.
+** potim=1.5
+Each MD step is 1.5fs.
