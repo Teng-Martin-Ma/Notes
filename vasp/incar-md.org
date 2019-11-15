@@ -1,4 +1,4 @@
-* ASE Molecular Dynamics INCAR
+* ASE Standard Molecular Dynamics INCAR
 ** xc='functional label'
 ** kpts=[4, 4, 1]
 ** lreal='A'
