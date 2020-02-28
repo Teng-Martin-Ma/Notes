@@ -4,7 +4,6 @@
     "editor.minimap.enabled": false,
     "editor.fontFamily": "Fira Code, Consolas",
     "editor.fontSize": 16,
-    "workbench.iconTheme": "material-icon-theme",
     "terminal.integrated.inheritEnv": false,
     "explorer.confirmDelete": false,
     "git.enableSmartCommit": true,
@@ -13,4 +12,5 @@
     "workbench.colorTheme": "Solarized Dark",
     "editor.formatOnSave": true,
     "editor.formatOnPaste": true,
+    "workbench.iconTheme": "vscode-icons",
 }
