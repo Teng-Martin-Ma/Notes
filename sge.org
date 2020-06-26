@@ -1,0 +1,7 @@
+# HPC SGE command 
+
+## check parallel environment
+qconf -sql
+
+## check finished job
+qacct -j <job_id>
