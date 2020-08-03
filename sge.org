@@ -1,7 +1,18 @@
-# HPC SGE command 
+* HPC SGE
 
-## check parallel environment
+** scripts
+#+begin_src
+#!/bin/bash             # environment
+#$ -j y                 # merge output and error files
+#$ -pe <env> <cores>    # parallel nodes
+#$ -m bae               # send email
+#$ -M <email>           # where email goes
+#$ -N <jobname>
+#$ -cwd                 # current working directory
+#+end_src
+
+** check parallel environment
 qconf -sql
 
-## check finished job
+** check finished job
 qacct -j <job_id>
